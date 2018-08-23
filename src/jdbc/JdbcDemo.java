@@ -12,7 +12,7 @@ public class JdbcDemo
         Connection con=
                 DriverManager.getConnection(   "jdbc:mysql://localhost:3306/javaBatch?useSSL=false","root","root");
         Statement statement=con.createStatement();
-        ResultSet resultSet=statement.executeQuery("select * from student");
+        ResultSet resultSet=statement.executeQuery("select * from information");
         while (resultSet.next())
         {
             System.out.println("Id: "+resultSet.getInt(1)+" Name: "+resultSet.getString(2));
